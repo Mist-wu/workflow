@@ -1,0 +1,214 @@
+{
+  "batch": "000",
+  "chapter_range": [
+    1,
+    9
+  ],
+  "debt": true,
+  "created_at": "2026-04-23T19:24:27",
+  "updated_at": "2026-04-23T20:55:18",
+  "stage": "done",
+  "chapters": {
+    "001": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3959,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "002": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 4162,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "003": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3872,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "004": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3994,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "005": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3865,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "006": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3947,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "007": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3981,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "008": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3901,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "009": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3882,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": true,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    }
+  },
+  "batch_artifacts": {},
+  "escalations": [],
+  "blocked_by": []
+}

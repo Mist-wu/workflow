@@ -1,0 +1,2795 @@
+{
+  "chapter": "010",
+  "file": "正文/第010章_一号任务.txt",
+  "title": "第十章 一号任务",
+  "stats": {
+    "total_chars": 3845,
+    "paragraph_count": 382,
+    "type_counts": {
+      "beat": 152,
+      "description": 25,
+      "dialogue": 129,
+      "monologue": 53,
+      "system": 23
+    },
+    "dialogue_ratio": 0.338,
+    "system_appearances": 23
+  },
+  "paragraphs": [
+    {
+      "line_start": 2,
+      "type": "beat",
+      "chars": 2,
+      "preview": "周日。",
+      "flags": []
+    },
+    {
+      "line_start": 5,
+      "type": "beat",
+      "chars": 11,
+      "preview": "我本来定了九点半的闹钟。",
+      "flags": []
+    },
+    {
+      "line_start": 7,
+      "type": "beat",
+      "chars": 15,
+      "preview": "结果闹钟响到一半被我摸黑摁掉了。",
+      "flags": []
+    },
+    {
+      "line_start": 9,
+      "type": "description",
+      "chars": 61,
+      "preview": "梦里我还在跑接力，接过第三棒，手掌一滑，棒子掉了。我伸手去捡，地面却像一块发面馒",
+      "flags": []
+    },
+    {
+      "line_start": 11,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"陈屿！\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 13,
+      "type": "description",
+      "chars": 36,
+      "preview": "我妈的声音从客厅穿过门缝、穿过枕头、穿过我后脑勺，像一把菜刀直接剁到我天灵盖上。",
+      "flags": []
+    },
+    {
+      "line_start": 15,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"——楼下阮眠找你！\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 17,
+      "type": "beat",
+      "chars": 9,
+      "preview": "我整个人弹起来一半。",
+      "flags": []
+    },
+    {
+      "line_start": 19,
+      "type": "description",
+      "chars": 26,
+      "preview": "床头柜上的闹钟屏幕一片漆黑——它不亮是因为被我自己拍暗了。",
+      "flags": []
+    },
+    {
+      "line_start": 21,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我摸到手机。",
+      "flags": []
+    },
+    {
+      "line_start": 23,
+      "type": "beat",
+      "chars": 6,
+      "preview": "十点五十三分。",
+      "flags": []
+    },
+    {
+      "line_start": 25,
+      "type": "monologue",
+      "chars": 2,
+      "preview": "（……完蛋。）",
+      "flags": []
+    },
+    {
+      "line_start": 27,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 29,
+      "type": "system",
+      "chars": 5,
+      "preview": "【早上好，宿主。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 31,
+      "type": "beat",
+      "chars": 15,
+      "preview": "（你要是再说一句早上好我跟你拼了。)",
+      "flags": []
+    },
+    {
+      "line_start": 33,
+      "type": "system",
+      "chars": 21,
+      "preview": "【本系统记录：宿主苏醒时间——周日十点五十三分。对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 35,
+      "type": "monologue",
+      "chars": 1,
+      "preview": "（……对。）",
+      "flags": []
+    },
+    {
+      "line_start": 37,
+      "type": "description",
+      "chars": 27,
+      "preview": "我把被子一把掀开，光脚踩在地板上，凉意从脚心一路窜到后脖颈。",
+      "flags": []
+    },
+    {
+      "line_start": 39,
+      "type": "dialogue",
+      "chars": 17,
+      "preview": "昨天晚上我跟阮眠回了个\"好\"，约的是十点。",
+      "flags": []
+    },
+    {
+      "line_start": 41,
+      "type": "description",
+      "chars": 24,
+      "preview": "我把十点听进去了，我也设了闹钟，我甚至把手机充在床头——",
+      "flags": []
+    },
+    {
+      "line_start": 43,
+      "type": "description",
+      "chars": 21,
+      "preview": "但是我忘了，我妈周六值完班，周日早上不喊我起来。",
+      "flags": []
+    },
+    {
+      "line_start": 45,
+      "type": "description",
+      "chars": 34,
+      "preview": "也就是说这个家里，在十点到十点五十三这将近一小时里，唯一清醒的人类是阮眠——",
+      "flags": []
+    },
+    {
+      "line_start": 47,
+      "type": "beat",
+      "chars": 12,
+      "preview": "以及被阮眠按响门铃的我妈。",
+      "flags": []
+    },
+    {
+      "line_start": 49,
+      "type": "monologue",
+      "chars": 6,
+      "preview": "（完蛋完蛋完蛋。）",
+      "flags": []
+    },
+    {
+      "line_start": 51,
+      "type": "beat",
+      "chars": 8,
+      "preview": "我裤子套反了一次。",
+      "flags": []
+    },
+    {
+      "line_start": 53,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 55,
+      "type": "description",
+      "chars": 32,
+      "preview": "冲出卧室门，我妈站在客厅，穿着那件蓝灰色的针织外套，袖口沾了一点白面粉。",
+      "flags": []
+    },
+    {
+      "line_start": 57,
+      "type": "dialogue",
+      "chars": 39,
+      "preview": "她手里端着一杯温水，脸上那种\"作为一个中学语文老师我现在非常冷静\"的笑意，我一看",
+      "flags": []
+    },
+    {
+      "line_start": 59,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她不是冷静。",
+      "flags": []
+    },
+    {
+      "line_start": 61,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她是在憋笑。",
+      "flags": []
+    },
+    {
+      "line_start": 63,
+      "type": "dialogue",
+      "chars": 30,
+      "preview": "\"陈屿同学。\"她把那个\"同学\"二字咬得特别标准，\"你邻居妹妹十点准时按门铃。\"",
+      "flags": []
+    },
+    {
+      "line_start": 65,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"……知道了。\"",
+      "flags": []
+    },
+    {
+      "line_start": 67,
+      "type": "dialogue",
+      "chars": 8,
+      "preview": "\"现在是十点五十五。\"",
+      "flags": []
+    },
+    {
+      "line_start": 69,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"……知道了。\"",
+      "flags": []
+    },
+    {
+      "line_start": 71,
+      "type": "dialogue",
+      "chars": 10,
+      "preview": "\"她在楼下花坛那边等你。\"",
+      "flags": []
+    },
+    {
+      "line_start": 73,
+      "type": "dialogue",
+      "chars": 21,
+      "preview": "\"妈。\"我一边套卫衣一边往门口冲，\"她为什么不上来等？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 75,
+      "type": "dialogue",
+      "chars": 30,
+      "preview": "\"我让她上来她不上。\"我妈慢条斯理喝了一口水，\"说是怕打扰陈屿哥哥睡觉。\"",
+      "flags": []
+    },
+    {
+      "line_start": 77,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 79,
+      "type": "monologue",
+      "chars": 4,
+      "preview": "（……这个孩子。）",
+      "flags": []
+    },
+    {
+      "line_start": 81,
+      "type": "dialogue",
+      "chars": 39,
+      "preview": "我妈在我身后意味深长地补了一句：\"你可别让这么懂事的小姑娘在花坛边再多站哪怕一分",
+      "flags": []
+    },
+    {
+      "line_start": 83,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"知道了！\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 85,
+      "type": "beat",
+      "chars": 16,
+      "preview": "我踩进鞋跟都没提好，门就被我甩上了。",
+      "flags": []
+    },
+    {
+      "line_start": 87,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 89,
+      "type": "beat",
+      "chars": 14,
+      "preview": "楼道里的声控灯一盏亮一盏不亮。",
+      "flags": []
+    },
+    {
+      "line_start": 91,
+      "type": "beat",
+      "chars": 8,
+      "preview": "我一口气跑下四楼。",
+      "flags": []
+    },
+    {
+      "line_start": 93,
+      "type": "description",
+      "chars": 45,
+      "preview": "出单元门，右手边那块小花坛——玉兰已经开了，白花压得枝条有点弯——花坛外侧的水泥",
+      "flags": []
+    },
+    {
+      "line_start": 95,
+      "type": "beat",
+      "chars": 4,
+      "preview": "双麻花辫。",
+      "flags": []
+    },
+    {
+      "line_start": 97,
+      "type": "description",
+      "chars": 21,
+      "preview": "藏青色校服外套——她那所中学的，跟我们云一不一样。",
+      "flags": []
+    },
+    {
+      "line_start": 99,
+      "type": "description",
+      "chars": 21,
+      "preview": "膝盖上搁着一只帆布袋，袋口露出一角深蓝色书皮。",
+      "flags": []
+    },
+    {
+      "line_start": 101,
+      "type": "description",
+      "chars": 30,
+      "preview": "她看到我出来，腾地一下从花坛边沿站起来，校服外套下摆跟着抖了一下。",
+      "flags": []
+    },
+    {
+      "line_start": 103,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 105,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"……你怎么不上来。\"",
+      "flags": []
+    },
+    {
+      "line_start": 107,
+      "type": "dialogue",
+      "chars": 29,
+      "preview": "\"我上来的话，\"她把帆布袋往怀里抱，抱得很紧，\"陈屿哥哥还要多睡十分钟。\"",
+      "flags": []
+    },
+    {
+      "line_start": 109,
+      "type": "dialogue",
+      "chars": 5,
+      "preview": "\"你等了多久。\"",
+      "flags": []
+    },
+    {
+      "line_start": 111,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"……一会儿。\"",
+      "flags": []
+    },
+    {
+      "line_start": 113,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"一会儿是多久。\"",
+      "flags": []
+    },
+    {
+      "line_start": 115,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"……五十分钟。\"",
+      "flags": []
+    },
+    {
+      "line_start": 117,
+      "type": "beat",
+      "chars": 9,
+      "preview": "她把后半句说得很快。",
+      "flags": []
+    },
+    {
+      "line_start": 119,
+      "type": "beat",
+      "chars": 6,
+      "preview": "像是怕我听清。",
+      "flags": []
+    },
+    {
+      "line_start": 121,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 123,
+      "type": "beat",
+      "chars": 7,
+      "preview": "我蹲下来系鞋跟。",
+      "flags": []
+    },
+    {
+      "line_start": 125,
+      "type": "beat",
+      "chars": 3,
+      "preview": "低着头。",
+      "flags": []
+    },
+    {
+      "line_start": 127,
+      "type": "beat",
+      "chars": 15,
+      "preview": "主要是不想让她看见我耳朵有点热。",
+      "flags": []
+    },
+    {
+      "line_start": 129,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"你怎么不给我打电话。\"",
+      "flags": []
+    },
+    {
+      "line_start": 131,
+      "type": "dialogue",
+      "chars": 7,
+      "preview": "\"怕吵醒陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 133,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"……你都已经来按门铃了。\"",
+      "flags": []
+    },
+    {
+      "line_start": 135,
+      "type": "dialogue",
+      "chars": 29,
+      "preview": "\"我不是——\"她小声说，\"我不是自己要按的。是阿姨说再不按你要睡到吃午饭。\"",
+      "flags": []
+    },
+    {
+      "line_start": 137,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 139,
+      "type": "beat",
+      "chars": 6,
+      "preview": "我抬起头看她。",
+      "flags": []
+    },
+    {
+      "line_start": 141,
+      "type": "description",
+      "chars": 49,
+      "preview": "她小半个脸埋进帆布袋。露在外面那一截——她比我上次见又圆了一点。三月里小孩该长个",
+      "flags": []
+    },
+    {
+      "line_start": 143,
+      "type": "monologue",
+      "chars": 4,
+      "preview": "（——这个孩子。）",
+      "flags": []
+    },
+    {
+      "line_start": 145,
+      "type": "system",
+      "chars": 2,
+      "preview": "【宿主。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 147,
+      "type": "monologue",
+      "chars": 2,
+      "preview": "（闭嘴。）",
+      "flags": []
+    },
+    {
+      "line_start": 149,
+      "type": "system",
+      "chars": 2,
+      "preview": "【……好的。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 151,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 153,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"什么题。\"我站起来，伸手。",
+      "flags": []
+    },
+    {
+      "line_start": 155,
+      "type": "beat",
+      "chars": 8,
+      "preview": "她把帆布袋递过来。",
+      "flags": []
+    },
+    {
+      "line_start": 157,
+      "type": "beat",
+      "chars": 4,
+      "preview": "袋子很轻。",
+      "flags": []
+    },
+    {
+      "line_start": 159,
+      "type": "description",
+      "chars": 43,
+      "preview": "我拉开拉链——一本折了角的数学综合测试卷，一本《初三数学压轴题精讲》，一支红笔，",
+      "flags": []
+    },
+    {
+      "line_start": 161,
+      "type": "beat",
+      "chars": 6,
+      "preview": "橡皮上有牙印。",
+      "flags": []
+    },
+    {
+      "line_start": 163,
+      "type": "monologue",
+      "chars": 6,
+      "preview": "（这小孩咬橡皮。）",
+      "flags": []
+    },
+    {
+      "line_start": 165,
+      "type": "dialogue",
+      "chars": 37,
+      "preview": "\"压轴那道。\"她踮了半下脚，用手指点了一下卷子背面最后一题，\"第二小问。我做了三",
+      "flags": []
+    },
+    {
+      "line_start": 167,
+      "type": "beat",
+      "chars": 11,
+      "preview": "我把卷子拎起来扫了一眼。",
+      "flags": []
+    },
+    {
+      "line_start": 169,
+      "type": "beat",
+      "chars": 7,
+      "preview": "是一道二次函数。",
+      "flags": []
+    },
+    {
+      "line_start": 171,
+      "type": "description",
+      "chars": 38,
+      "preview": "含参数的那种——二次项前面一个 a，开口方向和对称轴都跟 a 走，再给你一个 x",
+      "flags": []
+    },
+    {
+      "line_start": 173,
+      "type": "description",
+      "chars": 36,
+      "preview": "就是那种初三压轴的老套路：对称轴跟区间的位置关系，分三种情况讨论，一种都不能漏。",
+      "flags": []
+    },
+    {
+      "line_start": 175,
+      "type": "dialogue",
+      "chars": 15,
+      "preview": "\"走。\"我把卷子卷起来夹在胳膊下，\"上楼。\"",
+      "flags": []
+    },
+    {
+      "line_start": 177,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"楼下说呀。\"",
+      "flags": []
+    },
+    {
+      "line_start": 179,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"楼下风大。\"",
+      "flags": []
+    },
+    {
+      "line_start": 181,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"楼下——\"",
+      "flags": []
+    },
+    {
+      "line_start": 183,
+      "type": "dialogue",
+      "chars": 13,
+      "preview": "\"你再说一遍楼下我就不给你讲。\"",
+      "flags": []
+    },
+    {
+      "line_start": 185,
+      "type": "dialogue",
+      "chars": 8,
+      "preview": "她\"哦\"了一声，闭嘴了。",
+      "flags": []
+    },
+    {
+      "line_start": 187,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 189,
+      "type": "beat",
+      "chars": 17,
+      "preview": "回到家，我妈已经把客厅小饭桌擦干净了。",
+      "flags": []
+    },
+    {
+      "line_start": 191,
+      "type": "beat",
+      "chars": 18,
+      "preview": "桌子上放了一盘洗好的小番茄和一壶温水。",
+      "flags": []
+    },
+    {
+      "line_start": 193,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"阿姨——\"",
+      "flags": []
+    },
+    {
+      "line_start": 195,
+      "type": "dialogue",
+      "chars": 31,
+      "preview": "\"小阮坐。\"我妈把椅子往外拉了一下，\"你陈屿哥哥起床气还没消，你别跟他计较。\"",
+      "flags": []
+    },
+    {
+      "line_start": 197,
+      "type": "dialogue",
+      "chars": 21,
+      "preview": "\"没有。\"阮眠坐下来，腰背挺得笔直，\"陈屿哥哥对我很好。\"",
+      "flags": []
+    },
+    {
+      "line_start": 199,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 201,
+      "type": "monologue",
+      "chars": 21,
+      "preview": "（……她这句话说得这么正经我怎么觉得我在接受调查。）",
+      "flags": []
+    },
+    {
+      "line_start": 203,
+      "type": "beat",
+      "chars": 11,
+      "preview": "我妈笑了一下，转身进厨房。",
+      "flags": []
+    },
+    {
+      "line_start": 205,
+      "type": "beat",
+      "chars": 7,
+      "preview": "她没关厨房的门。",
+      "flags": []
+    },
+    {
+      "line_start": 207,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她故意没关。",
+      "flags": []
+    },
+    {
+      "line_start": 209,
+      "type": "description",
+      "chars": 21,
+      "preview": "我把卷子铺开，压在番茄盘旁边，拿过阮眠那支红笔。",
+      "flags": []
+    },
+    {
+      "line_start": 211,
+      "type": "dialogue",
+      "chars": 8,
+      "preview": "\"先给我看你的草稿。\"",
+      "flags": []
+    },
+    {
+      "line_start": 213,
+      "type": "beat",
+      "chars": 19,
+      "preview": "阮眠从帆布袋最底下摸出来一张皱巴巴的纸。",
+      "flags": []
+    },
+    {
+      "line_start": 215,
+      "type": "beat",
+      "chars": 12,
+      "preview": "我一边看一边吃了一颗番茄。",
+      "flags": []
+    },
+    {
+      "line_start": 217,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她做得不差。",
+      "flags": []
+    },
+    {
+      "line_start": 219,
+      "type": "description",
+      "chars": 23,
+      "preview": "判别式会用，顶点公式也会用，甚至把对称轴 x = a 都画出来了。",
+      "flags": []
+    },
+    {
+      "line_start": 221,
+      "type": "dialogue",
+      "chars": 29,
+      "preview": "问题出在第三步——她只讨论了\"对称轴在区间里\"和\"对称轴在区间外\"两种。",
+      "flags": []
+    },
+    {
+      "line_start": 223,
+      "type": "beat",
+      "chars": 4,
+      "preview": "少了一种。",
+      "flags": []
+    },
+    {
+      "line_start": 225,
+      "type": "dialogue",
+      "chars": 47,
+      "preview": "\"你这儿。\"我把笔尖点在她那张草稿上，\"对称轴在区间外，还要分是在左边还是在右边",
+      "flags": []
+    },
+    {
+      "line_start": 227,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"……啊。\"",
+      "flags": []
+    },
+    {
+      "line_start": 229,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"别'啊'，先看。\"",
+      "flags": []
+    },
+    {
+      "line_start": 231,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 233,
+      "type": "beat",
+      "chars": 4,
+      "preview": "她凑过来。",
+      "flags": []
+    },
+    {
+      "line_start": 235,
+      "type": "beat",
+      "chars": 5,
+      "preview": "靠得有点近。",
+      "flags": []
+    },
+    {
+      "line_start": 237,
+      "type": "beat",
+      "chars": 9,
+      "preview": "我往旁边挪了一公分。",
+      "flags": []
+    },
+    {
+      "line_start": 239,
+      "type": "beat",
+      "chars": 4,
+      "preview": "她没察觉。",
+      "flags": []
+    },
+    {
+      "line_start": 241,
+      "type": "beat",
+      "chars": 9,
+      "preview": "她眼睛盯着那张草稿。",
+      "flags": []
+    },
+    {
+      "line_start": 243,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"啊。\"",
+      "flags": []
+    },
+    {
+      "line_start": 245,
+      "type": "dialogue",
+      "chars": 10,
+      "preview": "半秒之后，她又\"啊\"了一声。",
+      "flags": []
+    },
+    {
+      "line_start": 247,
+      "type": "beat",
+      "chars": 8,
+      "preview": "第二声比第一声长。",
+      "flags": []
+    },
+    {
+      "line_start": 249,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 251,
+      "type": "dialogue",
+      "chars": 22,
+      "preview": "\"我再做一遍。\"她抽过红笔，在卷子背面空白处开始重写。",
+      "flags": []
+    },
+    {
+      "line_start": 253,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她写字挺快。",
+      "flags": []
+    },
+    {
+      "line_start": 255,
+      "type": "dialogue",
+      "chars": 24,
+      "preview": "力道有点重——写到\"讨论\"两个字的时候笔尖在纸上戳了一下。",
+      "flags": []
+    },
+    {
+      "line_start": 257,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我看着她写。",
+      "flags": []
+    },
+    {
+      "line_start": 259,
+      "type": "monologue",
+      "chars": 5,
+      "preview": "（……她是真聪明。）",
+      "flags": []
+    },
+    {
+      "line_start": 261,
+      "type": "monologue",
+      "chars": 10,
+      "preview": "（没怎么教就知道错哪了。）",
+      "flags": []
+    },
+    {
+      "line_start": 263,
+      "type": "system",
+      "chars": 2,
+      "preview": "【宿主。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 265,
+      "type": "monologue",
+      "chars": 1,
+      "preview": "（嗯。）",
+      "flags": []
+    },
+    {
+      "line_start": 267,
+      "type": "system",
+      "chars": 7,
+      "preview": "【你判断准确，对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 269,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 271,
+      "type": "monologue",
+      "chars": 1,
+      "preview": "（对。）",
+      "flags": []
+    },
+    {
+      "line_start": 273,
+      "type": "system",
+      "chars": 8,
+      "preview": "【这句话我记下来了。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 275,
+      "type": "monologue",
+      "chars": 6,
+      "preview": "（……记什么记啊你。）",
+      "flags": []
+    },
+    {
+      "line_start": 277,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 279,
+      "type": "beat",
+      "chars": 14,
+      "preview": "阮眠把三种情况一个一个写出来。",
+      "flags": []
+    },
+    {
+      "line_start": 281,
+      "type": "beat",
+      "chars": 17,
+      "preview": "写到第三种的时候她笔下去又顿了一下。",
+      "flags": []
+    },
+    {
+      "line_start": 283,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 285,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 287,
+      "type": "dialogue",
+      "chars": 13,
+      "preview": "\"第三种情况——是不是，a 大于 2 的时候？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 289,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"对。\"",
+      "flags": []
+    },
+    {
+      "line_start": 291,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"那 y 最小值——在 x=2 那一端取？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 293,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"对。\"",
+      "flags": []
+    },
+    {
+      "line_start": 295,
+      "type": "dialogue",
+      "chars": 36,
+      "preview": "\"因为开口向上，对称轴在右边，区间整个在对称轴左边，函数在区间上单调递减，取右端",
+      "flags": []
+    },
+    {
+      "line_start": 297,
+      "type": "dialogue",
+      "chars": 28,
+      "preview": "她说得越来越快，到\"单调递减\"四个字的时候几乎是一口气念出来的。",
+      "flags": []
+    },
+    {
+      "line_start": 299,
+      "type": "beat",
+      "chars": 3,
+      "preview": "我点头。",
+      "flags": []
+    },
+    {
+      "line_start": 301,
+      "type": "beat",
+      "chars": 11,
+      "preview": "她写完最后一步，把笔一搁。",
+      "flags": []
+    },
+    {
+      "line_start": 303,
+      "type": "beat",
+      "chars": 3,
+      "preview": "没抬头。",
+      "flags": []
+    },
+    {
+      "line_start": 305,
+      "type": "beat",
+      "chars": 7,
+      "preview": "她耳朵尖有点红。",
+      "flags": []
+    },
+    {
+      "line_start": 307,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"……陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 309,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 311,
+      "type": "dialogue",
+      "chars": 10,
+      "preview": "\"讲得比我们老师还清楚。\"",
+      "flags": []
+    },
+    {
+      "line_start": 313,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 315,
+      "type": "monologue",
+      "chars": 7,
+      "preview": "（……这句话听着耳熟。）",
+      "flags": []
+    },
+    {
+      "line_start": 317,
+      "type": "monologue",
+      "chars": 8,
+      "preview": "（妈也这么说过三次。）",
+      "flags": []
+    },
+    {
+      "line_start": 319,
+      "type": "monologue",
+      "chars": 11,
+      "preview": "（前三次我都在心里翻白眼。）",
+      "flags": []
+    },
+    {
+      "line_start": 321,
+      "type": "monologue",
+      "chars": 4,
+      "preview": "（这次没翻。）",
+      "flags": []
+    },
+    {
+      "line_start": 323,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 325,
+      "type": "system",
+      "chars": 1,
+      "preview": "【叮。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 327,
+      "type": "system",
+      "chars": 7,
+      "preview": "【好感度变动：阮眠 52 → 56。】",
+      "flags": [
+        "system",
+        "affinity"
+      ]
+    },
+    {
+      "line_start": 329,
+      "type": "system",
+      "chars": 11,
+      "preview": "【触发：压轴题现场教学。对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 331,
+      "type": "monologue",
+      "chars": 10,
+      "preview": "（……你能不能别播这种东西。）",
+      "flags": []
+    },
+    {
+      "line_start": 333,
+      "type": "system",
+      "chars": 12,
+      "preview": "【本系统只是在履行职责，对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 335,
+      "type": "monologue",
+      "chars": 10,
+      "preview": "（你的职责就是给我添堵。）",
+      "flags": []
+    },
+    {
+      "line_start": 337,
+      "type": "system",
+      "chars": 1,
+      "preview": "【哦。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 339,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 341,
+      "type": "dialogue",
+      "chars": 10,
+      "preview": "厨房门被我妈\"哐\"地拉开。",
+      "flags": []
+    },
+    {
+      "line_start": 343,
+      "type": "beat",
+      "chars": 10,
+      "preview": "一盘切好的苹果端出来。",
+      "flags": []
+    },
+    {
+      "line_start": 345,
+      "type": "description",
+      "chars": 21,
+      "preview": "苹果片摆得很整齐，中间还夹了两片切好的火龙果。",
+      "flags": []
+    },
+    {
+      "line_start": 347,
+      "type": "dialogue",
+      "chars": 19,
+      "preview": "\"小阮。\"我妈把盘子往桌上一放，\"中午留下来吃饭。\"",
+      "flags": []
+    },
+    {
+      "line_start": 349,
+      "type": "dialogue",
+      "chars": 19,
+      "preview": "\"啊？\"阮眠抬头，马上又站起来，\"阿姨不用的我回去——\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 351,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"你妈今天不在。\"",
+      "flags": []
+    },
+    {
+      "line_start": 353,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"……在的。\"",
+      "flags": []
+    },
+    {
+      "line_start": 355,
+      "type": "dialogue",
+      "chars": 26,
+      "preview": "\"你妈昨晚打电话给我，说今天她跟你爸要去展销会，晚上才回来。\"",
+      "flags": []
+    },
+    {
+      "line_start": 357,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "阮眠\"哦\"了一声。",
+      "flags": []
+    },
+    {
+      "line_start": 359,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她慢慢坐下。",
+      "flags": []
+    },
+    {
+      "line_start": 361,
+      "type": "monologue",
+      "chars": 4,
+      "preview": "（……你看你妈。）",
+      "flags": []
+    },
+    {
+      "line_start": 363,
+      "type": "dialogue",
+      "chars": 8,
+      "preview": "\"陈屿。\"我妈转头看我。",
+      "flags": []
+    },
+    {
+      "line_start": 365,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 367,
+      "type": "dialogue",
+      "chars": 13,
+      "preview": "\"你去帮我把阳台那袋米拎进来。\"",
+      "flags": []
+    },
+    {
+      "line_start": 369,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"哦。\"",
+      "flags": []
+    },
+    {
+      "line_start": 371,
+      "type": "beat",
+      "chars": 15,
+      "preview": "我起身的时候阮眠抬头看了我一眼。",
+      "flags": []
+    },
+    {
+      "line_start": 373,
+      "type": "beat",
+      "chars": 5,
+      "preview": "那一眼很快。",
+      "flags": []
+    },
+    {
+      "line_start": 375,
+      "type": "beat",
+      "chars": 17,
+      "preview": "她随即低下头，拿起一块苹果，小口小口咬。",
+      "flags": []
+    },
+    {
+      "line_start": 377,
+      "type": "beat",
+      "chars": 6,
+      "preview": "我转身去阳台。",
+      "flags": []
+    },
+    {
+      "line_start": 379,
+      "type": "description",
+      "chars": 23,
+      "preview": "路过门口时，我妈在我背后加了一句——不是对我，是对阮眠——",
+      "flags": []
+    },
+    {
+      "line_start": 381,
+      "type": "dialogue",
+      "chars": 23,
+      "preview": "\"小阮啊，你陈屿哥哥数学真就那样，运气好才能进重点班。\"",
+      "flags": []
+    },
+    {
+      "line_start": 383,
+      "type": "dialogue",
+      "chars": 14,
+      "preview": "阮眠小声：\"阿姨，他刚才讲得很清楚。\"",
+      "flags": []
+    },
+    {
+      "line_start": 385,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"那是因为他讲给你听。\"",
+      "flags": []
+    },
+    {
+      "line_start": 387,
+      "type": "monologue",
+      "chars": 8,
+      "preview": "（妈你到底站哪边的。）",
+      "flags": []
+    },
+    {
+      "line_start": 389,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 391,
+      "type": "beat",
+      "chars": 7,
+      "preview": "午饭吃得很家常。",
+      "flags": []
+    },
+    {
+      "line_start": 393,
+      "type": "beat",
+      "chars": 14,
+      "preview": "青菜，炖排骨，蒸蛋，一盘清炒土豆丝。",
+      "flags": []
+    },
+    {
+      "line_start": 395,
+      "type": "description",
+      "chars": 34,
+      "preview": "阮眠筷子拿得很规矩，夹菜只夹自己面前那一块，夹到蛋的时候会先分一半回碗里。",
+      "flags": []
+    },
+    {
+      "line_start": 397,
+      "type": "beat",
+      "chars": 6,
+      "preview": "我妈给她夹肉。",
+      "flags": []
+    },
+    {
+      "line_start": 399,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "她连连\"阿姨阿姨阿姨\"。",
+      "flags": []
+    },
+    {
+      "line_start": 401,
+      "type": "beat",
+      "chars": 9,
+      "preview": "我妈笑得眼睛弯起来。",
+      "flags": []
+    },
+    {
+      "line_start": 403,
+      "type": "dialogue",
+      "chars": 10,
+      "preview": "\"小阮在家吃饭都怎么吃。\"",
+      "flags": []
+    },
+    {
+      "line_start": 405,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"……我妈做饭。我吃。\"",
+      "flags": []
+    },
+    {
+      "line_start": 407,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"一个人在家呢。\"",
+      "flags": []
+    },
+    {
+      "line_start": 409,
+      "type": "dialogue",
+      "chars": 24,
+      "preview": "\"泡面。\"阮眠想了一下，认真补了一句，\"加一个鸡蛋和一点青菜。\"",
+      "flags": []
+    },
+    {
+      "line_start": 411,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "我妈\"嗯\"了一声。",
+      "flags": []
+    },
+    {
+      "line_start": 413,
+      "type": "beat",
+      "chars": 6,
+      "preview": "转头瞪我一眼。",
+      "flags": []
+    },
+    {
+      "line_start": 415,
+      "type": "dialogue",
+      "chars": 16,
+      "preview": "\"陈屿，你上次在家煮泡面还是上个月吧？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 417,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"……嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 419,
+      "type": "dialogue",
+      "chars": 5,
+      "preview": "\"加鸡蛋了吗。\"",
+      "flags": []
+    },
+    {
+      "line_start": 421,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"……没。\"",
+      "flags": []
+    },
+    {
+      "line_start": 423,
+      "type": "dialogue",
+      "chars": 5,
+      "preview": "\"加青菜了吗。\"",
+      "flags": []
+    },
+    {
+      "line_start": 425,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"妈。\"",
+      "flags": []
+    },
+    {
+      "line_start": 427,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"你看人家。\"",
+      "flags": []
+    },
+    {
+      "line_start": 429,
+      "type": "beat",
+      "chars": 16,
+      "preview": "整个午饭，我妈一共问了阮眠四个问题——",
+      "flags": []
+    },
+    {
+      "line_start": 431,
+      "type": "beat",
+      "chars": 11,
+      "preview": "一、你们学校初三早读几点。",
+      "flags": []
+    },
+    {
+      "line_start": 433,
+      "type": "beat",
+      "chars": 11,
+      "preview": "二、你爸妈这次要出差几天。",
+      "flags": []
+    },
+    {
+      "line_start": 435,
+      "type": "beat",
+      "chars": 9,
+      "preview": "三、你最近晚上几点睡。",
+      "flags": []
+    },
+    {
+      "line_start": 437,
+      "type": "beat",
+      "chars": 13,
+      "preview": "四、你平时喜欢吃甜的还是咸的。",
+      "flags": []
+    },
+    {
+      "line_start": 439,
+      "type": "beat",
+      "chars": 11,
+      "preview": "我在旁边喝汤，一口一口慢。",
+      "flags": []
+    },
+    {
+      "line_start": 441,
+      "type": "beat",
+      "chars": 12,
+      "preview": "没有问关于我的任何一个字。",
+      "flags": []
+    },
+    {
+      "line_start": 443,
+      "type": "monologue",
+      "chars": 13,
+      "preview": "（……她是真把这孩子当儿媳面试呢。）",
+      "flags": []
+    },
+    {
+      "line_start": 445,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 447,
+      "type": "beat",
+      "chars": 12,
+      "preview": "饭后我妈坚决不让阮眠洗碗。",
+      "flags": []
+    },
+    {
+      "line_start": 449,
+      "type": "dialogue",
+      "chars": 39,
+      "preview": "阮眠站在厨房门口磨了半天，最后被我妈用一句\"你帮我把你陈屿哥哥拉出去晒晒太阳\"解",
+      "flags": []
+    },
+    {
+      "line_start": 451,
+      "type": "beat",
+      "chars": 5,
+      "preview": "下午两点多。",
+      "flags": []
+    },
+    {
+      "line_start": 453,
+      "type": "beat",
+      "chars": 6,
+      "preview": "我和阮眠下楼。",
+      "flags": []
+    },
+    {
+      "line_start": 455,
+      "type": "description",
+      "chars": 28,
+      "preview": "天还是那种温温的三月太阳，照在小区水泥路上，影子拉得不长不短。",
+      "flags": []
+    },
+    {
+      "line_start": 457,
+      "type": "beat",
+      "chars": 10,
+      "preview": "她走在我左边半步后面。",
+      "flags": []
+    },
+    {
+      "line_start": 459,
+      "type": "beat",
+      "chars": 7,
+      "preview": "帆布袋抱在怀里。",
+      "flags": []
+    },
+    {
+      "line_start": 461,
+      "type": "dialogue",
+      "chars": 41,
+      "preview": "那本《压轴题精讲》她临走前非要塞回袋子里——她说：\"不然我妈问起来要是我没带回去",
+      "flags": []
+    },
+    {
+      "line_start": 463,
+      "type": "monologue",
+      "chars": 6,
+      "preview": "（小孩自我管理。）",
+      "flags": []
+    },
+    {
+      "line_start": 465,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我们没说话。",
+      "flags": []
+    },
+    {
+      "line_start": 467,
+      "type": "beat",
+      "chars": 8,
+      "preview": "走到她家那栋楼下。",
+      "flags": []
+    },
+    {
+      "line_start": 469,
+      "type": "beat",
+      "chars": 8,
+      "preview": "她在单元门口停住。",
+      "flags": []
+    },
+    {
+      "line_start": 471,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 473,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 475,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"谢谢你。\"",
+      "flags": []
+    },
+    {
+      "line_start": 477,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"不客气。\"",
+      "flags": []
+    },
+    {
+      "line_start": 479,
+      "type": "dialogue",
+      "chars": 13,
+      "preview": "她按密码，单元门\"咔哒\"一下开了。",
+      "flags": []
+    },
+    {
+      "line_start": 481,
+      "type": "beat",
+      "chars": 9,
+      "preview": "我想着送到这儿就行。",
+      "flags": []
+    },
+    {
+      "line_start": 483,
+      "type": "beat",
+      "chars": 3,
+      "preview": "她转身——",
+      "flags": []
+    },
+    {
+      "line_start": 485,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"陈屿哥哥，上去坐坐吗？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 487,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"不了。\"",
+      "flags": []
+    },
+    {
+      "line_start": 489,
+      "type": "dialogue",
+      "chars": 10,
+      "preview": "\"……那送我到家门口好不好？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 491,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"……好。\"",
+      "flags": []
+    },
+    {
+      "line_start": 493,
+      "type": "dialogue",
+      "chars": 39,
+      "preview": "\"好呀。\"她又小小声跟了半句，像是在接自己一句，又像是怕我听见了会嫌她嗲，说完马",
+      "flags": []
+    },
+    {
+      "line_start": 495,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 497,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她家在六楼。",
+      "flags": []
+    },
+    {
+      "line_start": 499,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我们爬楼梯。",
+      "flags": []
+    },
+    {
+      "line_start": 501,
+      "type": "beat",
+      "chars": 4,
+      "preview": "她爬得慢。",
+      "flags": []
+    },
+    {
+      "line_start": 503,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我陪着她慢。",
+      "flags": []
+    },
+    {
+      "line_start": 505,
+      "type": "dialogue",
+      "chars": 29,
+      "preview": "二楼到三楼之间，她突然说：\"陈屿哥哥，你们高一，数学是不是也要学这个。\"",
+      "flags": []
+    },
+    {
+      "line_start": 507,
+      "type": "dialogue",
+      "chars": 21,
+      "preview": "\"要，但我们学的是二次函数的反函数，还有图像变换。\"",
+      "flags": []
+    },
+    {
+      "line_start": 509,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"难吗。\"",
+      "flags": []
+    },
+    {
+      "line_start": 511,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"……还行。\"",
+      "flags": []
+    },
+    {
+      "line_start": 513,
+      "type": "dialogue",
+      "chars": 7,
+      "preview": "\"你讲给我听一次。\"",
+      "flags": []
+    },
+    {
+      "line_start": 515,
+      "type": "dialogue",
+      "chars": 5,
+      "preview": "\"哪有那么快。\"",
+      "flags": []
+    },
+    {
+      "line_start": 517,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"哦。\"",
+      "flags": []
+    },
+    {
+      "line_start": 519,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "她\"哦\"了一声，没再说话。",
+      "flags": []
+    },
+    {
+      "line_start": 521,
+      "type": "beat",
+      "chars": 9,
+      "preview": "到四楼转角，她又开口。",
+      "flags": []
+    },
+    {
+      "line_start": 523,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 525,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 527,
+      "type": "dialogue",
+      "chars": 7,
+      "preview": "\"我要是考上云一——\"",
+      "flags": []
+    },
+    {
+      "line_start": 529,
+      "type": "beat",
+      "chars": 3,
+      "preview": "我点头。",
+      "flags": []
+    },
+    {
+      "line_start": 531,
+      "type": "dialogue",
+      "chars": 3,
+      "preview": "\"高中部。\"",
+      "flags": []
+    },
+    {
+      "line_start": 533,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 535,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"你会不会已经毕业了。\"",
+      "flags": []
+    },
+    {
+      "line_start": 537,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我算了一下。",
+      "flags": []
+    },
+    {
+      "line_start": 539,
+      "type": "dialogue",
+      "chars": 11,
+      "preview": "\"不会。你高一的时候，我高三。\"",
+      "flags": []
+    },
+    {
+      "line_start": 541,
+      "type": "dialogue",
+      "chars": 9,
+      "preview": "\"那我们能在一个学校。\"",
+      "flags": []
+    },
+    {
+      "line_start": 543,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 545,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她没再说话。",
+      "flags": []
+    },
+    {
+      "line_start": 547,
+      "type": "beat",
+      "chars": 15,
+      "preview": "但我听到她上台阶的脚步快了一点。",
+      "flags": []
+    },
+    {
+      "line_start": 549,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 551,
+      "type": "beat",
+      "chars": 8,
+      "preview": "到了六楼她家门口。",
+      "flags": []
+    },
+    {
+      "line_start": 553,
+      "type": "dialogue",
+      "chars": 11,
+      "preview": "门上贴着一张\"福\"字，倒着贴。",
+      "flags": []
+    },
+    {
+      "line_start": 555,
+      "type": "beat",
+      "chars": 18,
+      "preview": "福字边角新，明显是刚搬进来没多久才贴的。",
+      "flags": []
+    },
+    {
+      "line_start": 557,
+      "type": "beat",
+      "chars": 12,
+      "preview": "她掏出钥匙，插进去，然后——没转。",
+      "flags": []
+    },
+    {
+      "line_start": 559,
+      "type": "beat",
+      "chars": 3,
+      "preview": "她回头。",
+      "flags": []
+    },
+    {
+      "line_start": 561,
+      "type": "beat",
+      "chars": 8,
+      "preview": "我站在她身后半步。",
+      "flags": []
+    },
+    {
+      "line_start": 563,
+      "type": "beat",
+      "chars": 12,
+      "preview": "她低头看了一下自己的鞋尖。",
+      "flags": []
+    },
+    {
+      "line_start": 565,
+      "type": "beat",
+      "chars": 4,
+      "preview": "然后抬头。",
+      "flags": []
+    },
+    {
+      "line_start": 567,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"陈屿哥哥。\"",
+      "flags": []
+    },
+    {
+      "line_start": 569,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 571,
+      "type": "dialogue",
+      "chars": 7,
+      "preview": "\"你有喜欢的人吗。\"",
+      "flags": []
+    },
+    {
+      "line_start": 573,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 575,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 577,
+      "type": "monologue",
+      "chars": 7,
+      "preview": "（——这个问题好熟啊。）",
+      "flags": []
+    },
+    {
+      "line_start": 579,
+      "type": "monologue",
+      "chars": 8,
+      "preview": "（——三天前周胖也问过。）",
+      "flags": []
+    },
+    {
+      "line_start": 581,
+      "type": "monologue",
+      "chars": 9,
+      "preview": "（——三天前我跟周胖说，没。）",
+      "flags": []
+    },
+    {
+      "line_start": 583,
+      "type": "system",
+      "chars": 2,
+      "preview": "【宿主。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 585,
+      "type": "beat",
+      "chars": 3,
+      "preview": "（别说话。)",
+      "flags": []
+    },
+    {
+      "line_start": 587,
+      "type": "system",
+      "chars": 2,
+      "preview": "【……好的。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 589,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 591,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"呃——\"",
+      "flags": []
+    },
+    {
+      "line_start": 593,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 595,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"……没。\"",
+      "flags": []
+    },
+    {
+      "line_start": 597,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "阮眠\"哦\"了一声。",
+      "flags": []
+    },
+    {
+      "line_start": 599,
+      "type": "beat",
+      "chars": 4,
+      "preview": "就一个字。",
+      "flags": []
+    },
+    {
+      "line_start": 601,
+      "type": "beat",
+      "chars": 11,
+      "preview": "她把钥匙在手心攥了一下。",
+      "flags": []
+    },
+    {
+      "line_start": 603,
+      "type": "beat",
+      "chars": 9,
+      "preview": "然后把钥匙转了半圈。",
+      "flags": []
+    },
+    {
+      "line_start": 605,
+      "type": "beat",
+      "chars": 6,
+      "preview": "门开了一条缝。",
+      "flags": []
+    },
+    {
+      "line_start": 607,
+      "type": "beat",
+      "chars": 5,
+      "preview": "她侧身进去。",
+      "flags": []
+    },
+    {
+      "line_start": 609,
+      "type": "beat",
+      "chars": 2,
+      "preview": "然后——",
+      "flags": []
+    },
+    {
+      "line_start": 611,
+      "type": "dialogue",
+      "chars": 6,
+      "preview": "\"陈屿哥哥再见。\"",
+      "flags": []
+    },
+    {
+      "line_start": 613,
+      "type": "beat",
+      "chars": 4,
+      "preview": "门关上了。",
+      "flags": []
+    },
+    {
+      "line_start": 615,
+      "type": "beat",
+      "chars": 4,
+      "preview": "她没用力。",
+      "flags": []
+    },
+    {
+      "line_start": 617,
+      "type": "dialogue",
+      "chars": 8,
+      "preview": "门锁\"咔哒\"自己合上。",
+      "flags": []
+    },
+    {
+      "line_start": 619,
+      "type": "beat",
+      "chars": 7,
+      "preview": "我站在门外三秒。",
+      "flags": []
+    },
+    {
+      "line_start": 621,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 623,
+      "type": "monologue",
+      "chars": 9,
+      "preview": "（……这是气我还是没气我。）",
+      "flags": []
+    },
+    {
+      "line_start": 625,
+      "type": "monologue",
+      "chars": 5,
+      "preview": "（——好像都不是。）",
+      "flags": []
+    },
+    {
+      "line_start": 627,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 629,
+      "type": "beat",
+      "chars": 3,
+      "preview": "我下楼。",
+      "flags": []
+    },
+    {
+      "line_start": 631,
+      "type": "beat",
+      "chars": 14,
+      "preview": "六楼到一楼，我走得比上来快得多。",
+      "flags": []
+    },
+    {
+      "line_start": 633,
+      "type": "beat",
+      "chars": 13,
+      "preview": "出单元门，我没直接回自己那栋。",
+      "flags": []
+    },
+    {
+      "line_start": 635,
+      "type": "beat",
+      "chars": 18,
+      "preview": "我在小区花坛旁边那张长椅上坐了一会儿。",
+      "flags": []
+    },
+    {
+      "line_start": 637,
+      "type": "beat",
+      "chars": 11,
+      "preview": "风把玉兰花瓣吹下来两片。",
+      "flags": []
+    },
+    {
+      "line_start": 639,
+      "type": "beat",
+      "chars": 7,
+      "preview": "一片落在我鞋上。",
+      "flags": []
+    },
+    {
+      "line_start": 641,
+      "type": "beat",
+      "chars": 7,
+      "preview": "一片落在我旁边。",
+      "flags": []
+    },
+    {
+      "line_start": 643,
+      "type": "description",
+      "chars": 25,
+      "preview": "我用鞋尖把那片花瓣碾了一下，又觉得不该碾，又把脚收回来。",
+      "flags": []
+    },
+    {
+      "line_start": 645,
+      "type": "monologue",
+      "chars": 9,
+      "preview": "（……我今天怎么这么墨迹。）",
+      "flags": []
+    },
+    {
+      "line_start": 647,
+      "type": "system",
+      "chars": 2,
+      "preview": "【宿主。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 649,
+      "type": "monologue",
+      "chars": 1,
+      "preview": "（嗯。）",
+      "flags": []
+    },
+    {
+      "line_start": 651,
+      "type": "system",
+      "chars": 15,
+      "preview": "【今天你连续做了三个正确决定，对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 653,
+      "type": "monologue",
+      "chars": 4,
+      "preview": "（我做了啥。）",
+      "flags": []
+    },
+    {
+      "line_start": 655,
+      "type": "system",
+      "chars": 11,
+      "preview": "【没撒谎、没敷衍、没逃避。对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 657,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 659,
+      "type": "monologue",
+      "chars": 27,
+      "preview": "（——什么时候撒了什么时候敷衍了什么时候逃避了你倒是跟我说说。）",
+      "flags": []
+    },
+    {
+      "line_start": 661,
+      "type": "system",
+      "chars": 24,
+      "preview": "【第一，你告诉她错在第三步，没有糊弄说\"你回去自己再想想\"。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 663,
+      "type": "system",
+      "chars": 19,
+      "preview": "【第二，你妈让你把她留下来吃饭，你没有赶她走。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 665,
+      "type": "system",
+      "chars": 35,
+      "preview": "【第三，她问你有没有喜欢的人，你说没有。你没说\"你管我\"，也没说\"我再想想\"，你",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 667,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 669,
+      "type": "monologue",
+      "chars": 3,
+      "preview": "（这也算？）",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 671,
+      "type": "system",
+      "chars": 3,
+      "preview": "【这就算。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 673,
+      "type": "monologue",
+      "chars": 16,
+      "preview": "（那我明明答得很敷衍啊，那个\"呃……没\"的\"呃\"。）",
+      "flags": []
+    },
+    {
+      "line_start": 675,
+      "type": "system",
+      "chars": 14,
+      "preview": "【\"呃\"这一下是真的。敷衍是假的。对吗？】",
+      "flags": [
+        "system",
+        "emo"
+      ]
+    },
+    {
+      "line_start": 677,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 679,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 681,
+      "type": "beat",
+      "chars": 10,
+      "preview": "系统说完，难得没再接话。",
+      "flags": []
+    },
+    {
+      "line_start": 683,
+      "type": "beat",
+      "chars": 11,
+      "preview": "我在长椅上又坐了一会儿。",
+      "flags": []
+    },
+    {
+      "line_start": 685,
+      "type": "beat",
+      "chars": 7,
+      "preview": "三月的阳光不烈。",
+      "flags": []
+    },
+    {
+      "line_start": 687,
+      "type": "dialogue",
+      "chars": 12,
+      "preview": "我想起阮眠刚才\"哦\"的那一声。",
+      "flags": []
+    },
+    {
+      "line_start": 689,
+      "type": "dialogue",
+      "chars": 29,
+      "preview": "又想起她在饭桌上说\"陈屿哥哥讲得比我老师还清楚\"那一下的耳朵尖。",
+      "flags": []
+    },
+    {
+      "line_start": 691,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 693,
+      "type": "monologue",
+      "chars": 10,
+      "preview": "（……这孩子，真的，不是小孩子。）",
+      "flags": []
+    },
+    {
+      "line_start": 695,
+      "type": "monologue",
+      "chars": 8,
+      "preview": "（但她也不是大孩子。）",
+      "flags": []
+    },
+    {
+      "line_start": 697,
+      "type": "monologue",
+      "chars": 11,
+      "preview": "（她是一个——只对我粘的小孩。）",
+      "flags": []
+    },
+    {
+      "line_start": 699,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我叹了口气。",
+      "flags": []
+    },
+    {
+      "line_start": 701,
+      "type": "beat",
+      "chars": 7,
+      "preview": "从长椅上站起来。",
+      "flags": []
+    },
+    {
+      "line_start": 703,
+      "type": "beat",
+      "chars": 0,
+      "preview": "---",
+      "flags": []
+    },
+    {
+      "line_start": 705,
+      "type": "beat",
+      "chars": 16,
+      "preview": "回到家，我妈已经在客厅看她的电视剧。",
+      "flags": []
+    },
+    {
+      "line_start": 707,
+      "type": "dialogue",
+      "chars": 12,
+      "preview": "她眼睛没离开屏幕：\"小阮走啦？\"",
+      "flags": [
+        "emo"
+      ]
+    },
+    {
+      "line_start": 709,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 711,
+      "type": "dialogue",
+      "chars": 2,
+      "preview": "\"她乖。\"",
+      "flags": []
+    },
+    {
+      "line_start": 713,
+      "type": "dialogue",
+      "chars": 1,
+      "preview": "\"嗯。\"",
+      "flags": []
+    },
+    {
+      "line_start": 715,
+      "type": "dialogue",
+      "chars": 4,
+      "preview": "\"你也要乖。\"",
+      "flags": []
+    },
+    {
+      "line_start": 717,
+      "type": "monologue",
+      "chars": 6,
+      "preview": "（……妈我都高一了。）",
+      "flags": []
+    },
+    {
+      "line_start": 719,
+      "type": "beat",
+      "chars": 9,
+      "preview": "我没接话，径直进房间。",
+      "flags": []
+    },
+    {
+      "line_start": 721,
+      "type": "beat",
+      "chars": 16,
+      "preview": "桌上那本没写完的语文作业，我没去看。",
+      "flags": []
+    },
+    {
+      "line_start": 723,
+      "type": "beat",
+      "chars": 5,
+      "preview": "我关上房门。",
+      "flags": []
+    },
+    {
+      "line_start": 725,
+      "type": "description",
+      "chars": 41,
+      "preview": "炭头不知道什么时候溜进来的，四个爪子收在肚子底下，占着床头柜中间那块最好的位置，",
+      "flags": []
+    },
+    {
+      "line_start": 727,
+      "type": "beat",
+      "chars": 4,
+      "preview": "我走过去。",
+      "flags": []
+    },
+    {
+      "line_start": 729,
+      "type": "beat",
+      "chars": 10,
+      "preview": "它抬头看了我一眼，没动。",
+      "flags": []
+    },
+    {
+      "line_start": 731,
+      "type": "beat",
+      "chars": 6,
+      "preview": "我在床沿坐下。",
+      "flags": []
+    },
+    {
+      "line_start": 733,
+      "type": "beat",
+      "chars": 13,
+      "preview": "床头柜的木头被它晒得温温的。",
+      "flags": []
+    },
+    {
+      "line_start": 735,
+      "type": "beat",
+      "chars": 14,
+      "preview": "我把手背贴上去靠了靠，又抬起来。",
+      "flags": []
+    },
+    {
+      "line_start": 737,
+      "type": "beat",
+      "chars": 18,
+      "preview": "把外套脱了，搭在椅背上，整个人往床上一倒。",
+      "flags": []
+    },
+    {
+      "line_start": 739,
+      "type": "beat",
+      "chars": 4,
+      "preview": "枕头凉的。",
+      "flags": []
+    },
+    {
+      "line_start": 741,
+      "type": "description",
+      "chars": 40,
+      "preview": "对着天花板那块没擦干净的旧水渍——去年冬天开暖气给烘出来的那圈黄——像一块没拿掉",
+      "flags": []
+    },
+    {
+      "line_start": 743,
+      "type": "monologue",
+      "chars": 0,
+      "preview": "（……）",
+      "flags": []
+    },
+    {
+      "line_start": 745,
+      "type": "monologue",
+      "chars": 10,
+      "preview": "（——陈屿哥哥有喜欢的人吗。）",
+      "flags": []
+    },
+    {
+      "line_start": 747,
+      "type": "beat",
+      "chars": 13,
+      "preview": "这一句不知怎么又回来了一次。",
+      "flags": []
+    },
+    {
+      "line_start": 749,
+      "type": "beat",
+      "chars": 7,
+      "preview": "我闭了一下眼睛。",
+      "flags": []
+    },
+    {
+      "line_start": 751,
+      "type": "beat",
+      "chars": 5,
+      "preview": "没再往下想。",
+      "flags": []
+    },
+    {
+      "line_start": 753,
+      "type": "beat",
+      "chars": 17,
+      "preview": "炭头不知道什么时候跳到了我枕头旁边。",
+      "flags": []
+    },
+    {
+      "line_start": 755,
+      "type": "beat",
+      "chars": 17,
+      "preview": "它把头塞进我胳膊肘下面，像一个小暖炉。",
+      "flags": []
+    },
+    {
+      "line_start": 757,
+      "type": "beat",
+      "chars": 12,
+      "preview": "楼下远远传来一声自行车铃。",
+      "flags": []
+    },
+    {
+      "line_start": 759,
+      "type": "beat",
+      "chars": 10,
+      "preview": "窗外的天色变浅了一点。",
+      "flags": []
+    },
+    {
+      "line_start": 761,
+      "type": "system",
+      "chars": 4,
+      "preview": "【宿主，晚安。】",
+      "flags": [
+        "system"
+      ]
+    },
+    {
+      "line_start": 763,
+      "type": "monologue",
+      "chars": 1,
+      "preview": "（……嗯。）",
+      "flags": []
+    },
+    {
+      "line_start": 765,
+      "type": "beat",
+      "chars": 6,
+      "preview": "————本章字数：约 3850 字————",
+      "flags": []
+    }
+  ],
+  "seam": {
+    "prev_chapter_tail_previews": [
+      "我把手机反扣在桌上。",
+      "外面巷子口传来自行车铃一声。",
+      "————本章字数：约 3900 字————"
+    ],
+    "current_chapter_head_previews": [
+      "周日。",
+      "我本来定了九点半的闹钟。",
+      "结果闹钟响到一半被我摸黑摁掉了。"
+    ],
+    "current_chapter_tail_previews": [
+      "【宿主，晚安。】",
+      "（……嗯。）",
+      "————本章字数：约 3850 字————"
+    ]
+  },
+  "flagged_spans": []
+}

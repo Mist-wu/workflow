@@ -1,0 +1,170 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "last_updated": "2026-04-23",
+    "writer": "seeded-from-事实表.md",
+    "note": "只有 Merger 可写；其它 subagent 产 F.delta.json 增量，Merger 合并。"
+  },
+  "canon": {
+    "characters": {
+      "陈屿": {
+        "role": "主角",
+        "height": 179,
+        "grade": "高一(7)班",
+        "seat": "第4排靠窗",
+        "immutable_fields": ["height"]
+      },
+      "林知夏": {
+        "role": "同桌",
+        "height": 162,
+        "hair": "黑直长发到肩胛骨",
+        "glasses": "细框",
+        "feature": "笑有小虎牙",
+        "catchphrase": "陈屿，你的作业。",
+        "immutable_fields": ["height", "catchphrase", "feature"]
+      },
+      "苏檐": {
+        "role": "青梅",
+        "height": 165,
+        "identity": "云一女篮7号控卫",
+        "hair": "马尾",
+        "catchphrase": "陈屿，你是不是傻",
+        "immutable_fields": ["height", "identity", "catchphrase"]
+      },
+      "顾星晚": {
+        "role": "学姐",
+        "height": 170,
+        "hair": "齐耳短发",
+        "outfit": "米白毛衣 + 格子长裙",
+        "speech_pattern": "说话前半秒停顿",
+        "catchphrases": ["嗯", "让我想想", "你不用这样的"],
+        "immutable_fields": ["height", "speech_pattern"]
+      },
+      "阮眠": {
+        "role": "邻居妹（另一所中学）",
+        "height": 158,
+        "hair": "双麻花辫",
+        "outfit": "藏青校服",
+        "catchphrases": ["陈屿哥哥……", "我不是", "好呀"],
+        "academic": "保送线水平",
+        "immutable_fields": ["height", "hair", "catchphrases"]
+      },
+      "白鹭": {
+        "role": "转学生（卷二第026章转入）",
+        "immutable_fields": ["role"]
+      },
+      "周胖": {
+        "role": "发小",
+        "catchphrases": ["兄弟！", "这波啊……", "我请客"]
+      },
+      "郑维": {
+        "role": "学委"
+      },
+      "老陆": {
+        "full_name": "陆承志",
+        "role": "班主任/数学老师",
+        "feature": "秃顶",
+        "catchphrase": "你说是吧，陈屿同学。"
+      }
+    },
+    "world": {
+      "school": "云屿一中（云一）",
+      "city": "云屿市",
+      "class": "高一(7)班",
+      "convenience_store": {
+        "name": "灯下便利店",
+        "owner": "柯老板娘（戴金丝眼镜）"
+      },
+      "rival_school_basketball": "六中",
+      "system_version": "0.8",
+      "system_terms_of_address": "宿主",
+      "system_line_format": "【...对吗？】",
+      "monologue_format": "（...）独立成段",
+      "black_cat": "炭头"
+    }
+  },
+  "affinity": {
+    "林知夏": {
+      "current": 55,
+      "history": [
+        {"chapter": "002", "value": 35, "delta": 0, "event": "初登场"},
+        {"chapter": "006", "value": 55, "delta": 14, "event": "蚂蚁事件：陈屿悄悄替她扫蚂蚁，林知夏首次偷偷画火柴人"}
+      ]
+    },
+    "苏檐": {
+      "current": 61,
+      "history": [
+        {"chapter": "008", "value": 55, "delta": 0, "event": "正式首次登场"},
+        {"chapter": "009", "value": 61, "delta": 6, "event": "周六女篮友谊赛赢球后小拳头回应 + 赛后递纸巾"}
+      ]
+    },
+    "阮眠": {
+      "current": 56,
+      "history": [
+        {"chapter": "003", "value": 52, "delta": 0, "event": "首次到家吃饭"},
+        {"chapter": "010", "value": 56, "delta": 4, "event": "周日讲压轴题 + 门口一问"}
+      ]
+    },
+    "顾星晚": {
+      "current": 27,
+      "history": [
+        {"chapter": "005", "value": 20, "delta": 0, "event": "公告栏前被半哄半拐填广播站报名表"},
+        {"chapter": "007", "value": 27, "delta": 7, "event": "广播站首秀念对姓名、她笑"}
+      ]
+    },
+    "白鹭": {
+      "current": null,
+      "history": []
+    }
+  },
+  "timeline": {
+    "narrative_start": "3月1日（周一）开学",
+    "current_date": "3月7日（周日）晚",
+    "current_period": "卷一 · 运动会月倒计时",
+    "events_ordered": [
+      {"chapter": "001", "date": "开学前", "summary": "陈屿被炭头撞倒绑定系统ver.0.8"},
+      {"chapter": "002", "date": "3月1日(周一)", "summary": "开学日；认识林知夏、周胖、郑维；首任务'说早'完成"},
+      {"chapter": "003", "date": "3月1日(周一)晚", "summary": "阮眠首次到家吃饭"},
+      {"chapter": "004", "date": "3月2日(周二)", "summary": "数学课捡笔任务失败，扣生活币2"},
+      {"chapter": "005", "date": "3月3日(周三)", "summary": "中午广播听到顾星晚声音；下午被填广播站报名表"},
+      {"chapter": "006", "date": "3月4日(周四)", "summary": "早读蚂蚁事件；林知夏画火柴人；陈屿笑出声被罚站"},
+      {"chapter": "007", "date": "3月4日(周四)放学后", "summary": "广播站第一天报到；认识阿策/小林/老杨；念对顾星晚"},
+      {"chapter": "008", "date": "3月5日(周五)早", "summary": "苏檐校门口送关东煮正式首次登场；约周六友谊赛"},
+      {"chapter": "009", "date": "3月6日(周六)下午", "summary": "女篮友谊赛对六中赢6分；赛后递纸巾"},
+      {"chapter": "010", "date": "3月7日(周日)中午", "summary": "阮眠来讲压轴题；送到门口一问"}
+    ]
+  },
+  "foreshadow": {
+    "active": [
+      {"id": "FS-系统真身", "desc": "系统=陈屿十八岁意识残响+炭头撞击触发", "planted_chapter": "001", "resolved_chapter": null, "immutable": true},
+      {"id": "FS-炭头", "desc": "炭头在003/007/010反复在场", "planted_chapter": "001", "resolved_chapter": null},
+      {"id": "FS-广播站", "desc": "广播站=顾星晚线主阵地", "planted_chapter": "005", "resolved_chapter": null},
+      {"id": "FS-林怕虫", "desc": "林知夏怕虫（第006章显化）", "planted_chapter": "006", "resolved_chapter": null},
+      {"id": "FS-火柴人", "desc": "林知夏画火柴人小人画", "planted_chapter": "006", "resolved_chapter": null, "expected_resolve": "011"},
+      {"id": "FS-苏老房子", "desc": "苏檐十年邻居+家里有老房子", "planted_chapter": "008", "resolved_chapter": null, "expected_resolve": "卷五海边"},
+      {"id": "FS-顾留学", "desc": "顾星晚家预科/出国隐性压力", "planted_chapter": null, "resolved_chapter": null, "expected_resolve": "024"}
+    ],
+    "resolved": [],
+    "pending_questions": [
+      {"id": "Q1", "desc": "林知夏为什么主动点名陈屿跑接力第四棒", "expected_resolve": "013"},
+      {"id": "Q2", "desc": "顾星晚'留下不想留下的人有时候对他好'的真实含义", "expected_resolve": "卷二-卷六分段"},
+      {"id": "Q3", "desc": "陈屿自己是否意识到他在'在乎'", "expected_resolve": "025"}
+    ]
+  },
+  "quotes_locked": [
+    {"id": "Q-006-LZX-01", "speaker": "林知夏", "chapter": "006", "canon": true, "note": "首次画火柴人 + X"},
+    {"id": "Q-008-SY-01", "speaker": "苏檐", "chapter": "008", "text_hint": "烧《海底两万里》威胁台词", "canon": true}
+  ],
+  "chapter_status": {
+    "001": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3959, "batch": "000"},
+    "002": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 4162, "batch": "000"},
+    "003": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3872, "batch": "000"},
+    "004": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3994, "batch": "000"},
+    "005": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3865, "batch": "000"},
+    "006": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3947, "batch": "000"},
+    "007": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3981, "batch": "000"},
+    "008": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3901, "batch": "000"},
+    "009": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3882, "batch": "000"},
+    "010": {"draft": true, "hard_check": true, "polish": true, "revise": true, "final": true, "cn_chars": 3845, "batch": "001"}
+  }
+}

@@ -1,0 +1,48 @@
+# 抒情豁免章号清单
+# 仅在本清单中的章号，软限额/硬禁用阈值会放宽一档（重→中、中→轻）。
+# 来源：framework/03_风格与创作铁律.md §十一
+# 本文件是 scripts/scan_ai_templates.py 与 scripts/check_dod.py 的唯一口径。
+
+# 被豁免的章号（三位数字字符串）
+exempt_chapters:
+  # 卷四末尾（高一结束前的合照）
+  - "100"
+
+  # 卷五海边夜 + 卷五末尾
+  - "120"
+  - "121"
+  - "125"
+
+  # 卷六顾星晚出国
+  - "148"
+  - "149"
+  - "150"
+
+  # 卷八顾星晚回国
+  - "190"
+  - "191"
+
+  # 卷九冬夜关键一章
+  - "215"
+
+  # 卷十毕业 / 表白 / 真结局 / 尾声
+  - "243"
+  - "244"
+  - "247"
+  - "248"
+  - "249"
+  - "250"
+
+# 规则口径
+rules:
+  # 豁免章的硬禁用：不是零容忍，而是降级为"软限额（> 2 才报）"
+  hard_ban_threshold_exempt: 3
+  hard_ban_threshold_normal: 1
+
+  # 心跳漏了一拍的限额
+  heart_skip_exempt: 3
+  heart_skip_normal: 1
+
+  # "静静/默默/悄悄"叠词三连
+  diedz_exempt_allowed: true
+  diedz_normal_allowed: false

@@ -1,0 +1,128 @@
+{
+  "batch": "001",
+  "chapter_range": [
+    10,
+    14
+  ],
+  "debt": false,
+  "created_at": "2026-04-23T19:24:49",
+  "updated_at": "2026-04-23T21:15:48",
+  "stage": "writing",
+  "chapters": {
+    "010": {
+      "stage": "done",
+      "mode": "single",
+      "char_count": 3845,
+      "hard_ban": 0,
+      "reader_avg": 7.3,
+      "severity": {
+        "pacing": "轻",
+        "style": "无",
+        "ai": "无"
+      },
+      "A_count": 0,
+      "C_heavy": 0,
+      "dod_passed": true,
+      "quality_score": 7,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "011": {
+      "stage": "writing",
+      "mode": "single",
+      "char_count": null,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": false,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "012": {
+      "stage": "writing",
+      "mode": "single",
+      "char_count": null,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": false,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "013": {
+      "stage": "writing",
+      "mode": "single",
+      "char_count": null,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": false,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    },
+    "014": {
+      "stage": "writing",
+      "mode": "single",
+      "char_count": null,
+      "hard_ban": null,
+      "reader_avg": null,
+      "severity": {
+        "pacing": null,
+        "style": null,
+        "ai": null
+      },
+      "A_count": null,
+      "C_heavy": null,
+      "dod_passed": false,
+      "quality_score": null,
+      "retry_counts": {
+        "writer": 0,
+        "reviser": 0,
+        "synth": 0
+      },
+      "pending": []
+    }
+  },
+  "batch_artifacts": {
+    "context_pack": "审查/批次001_010-014/00_语境包.md"
+  },
+  "escalations": [],
+  "blocked_by": []
+}
