@@ -3,306 +3,259 @@
 Bilibili 视频总结工具
 
 用法:
-  python script/process.py BVxxxxxxxx
-  python script/process.py https://www.bilibili.com/video/BVxxxxxxxx
+  export GEMINI_API_KEY='your_key'
+  python3 script/process.py BVxxxxxxxx
 
-环境变量:
-  GEMINI_API_KEY  必填
+依赖:
+  bilibili-api-python curl_cffi requests (pip install)
+  ffmpeg / ffprobe (brew install ffmpeg)
 """
-
 import base64
 import json
 import os
-import re
 import subprocess
 import sys
 import time
-import urllib.request
 from pathlib import Path
 
-# --- 配置 ---
-VENV_DIR = Path("/tmp/bili_venv")
-PROJECT_DIR = Path(__file__).resolve().parent.parent
-SUMMARY_DIR = PROJECT_DIR / "video-summaries"
-GEMINI_MODEL = "gemini-2.5-flash"
-
-# Gemini 分析 prompt
-ANALYSIS_PROMPT = """请仔细听这段视频音频，输出中文总结，使用以下 markdown 标题（`##`）作为段落分隔：
-
-## 一句话总结
-
-一句话概括视频核心内容。
-
-## 时间轴摘要
-
-按时间顺序列出主要内容，每行以时间戳开头，格式： `MM:SS-MM:SS` 加内容描述。
-
-## 核心观点
-
-提炼 3-5 个核心观点。
-
-## 核心观点
-
-...
-
-## 可执行建议【如适用】
-
-如果视频包含方法论、实操步骤、行动指南等可落地的内容，则列出具体建议。
-如果视频仅为观点分享、资讯速递、纯分析评论，则不输出此段落。
-
-## 需要警惕【如适用】
-
-如果视频涉及以下任一情况，则列出需要警惕或容易误解的点：
-- 商业/赚钱/投资类内容（营销话术、玄学表达）
-- 健康/心理类（非科学主张）
-- 有明显争议或偏颇的观点
-- 容易以偏概全的结论
-- 广告、赞助商内容需要忽略
-
-如果视频为纯粹的技术教程、知识科普、信息分享，则可以不输出此段落。
-
-要求：
-- 不要逐字转录
-- 不要编造音频中没有的信息
-- 只输出上述段落，按实际情况选择是否包含可执行建议和需要警惕"""
-
-
-def ensure_venv():
-    """确保虚拟环境和依赖已就绪"""
-    python = VENV_DIR / "bin" / "python"
-    if python.exists():
-        return str(python)
-
-    print("🔧 创建虚拟环境并安装依赖...", file=sys.stderr)
-    subprocess.run(
-        ["uv", "venv", "-p", "3.12", str(VENV_DIR)],
-        check=True, capture_output=True,
-    )
-    subprocess.run(
-        ["uv", "pip", "install", "--python", str(python),
-         "bilibili-api-python", "httpx", "curl_cffi"],
-        check=True, capture_output=True,
-    )
-    return str(python)
-
-
-def extract_bvid(input_str: str) -> str:
-    """从 URL 或直接输入中提取 BVID"""
-    m = re.search(r"BV\w{10}", input_str)
-    if not m:
-        print("错误：无法解析 BVID，请提供 BV 号或完整 URL", file=sys.stderr)
-        sys.exit(1)
-    return m.group(0)
-
-
-def run_bili_script(python_bin: str, code: str) -> str:
-    """在 venv 内执行 bilibili-api-python 代码，返回 stdout"""
-    result = subprocess.run(
-        [python_bin, "-c", code],
-        capture_output=True, text=True, timeout=60,
-    )
-    if result.returncode != 0:
-        print(f"bilibili-api 错误: {result.stderr}", file=sys.stderr)
-        sys.exit(1)
-    return result.stdout.strip()
-
-
-def get_video_info(python_bin: str, bvid: str) -> dict:
-    """获取视频基本信息"""
-    code = f"""
+import requests
 from bilibili_api import sync, select_client, Credential
 from bilibili_api.video import Video
-import json
-select_client('curl_cffi')
-cred = Credential()
-v = Video(bvid='{bvid}', credential=cred)
-info = sync(v.get_info())
-print(json.dumps({{
-    'title': info.get('title'),
-    'owner': info.get('owner', {{}}).get('name'),
-    'duration': info.get('duration'),
-    'cid': info.get('cid'),
-    'has_subtitle': bool(info.get('subtitle', {{}}).get('list', [])),
-    'pages': info.get('pages', []),
-}}, ensure_ascii=False))
-"""
-    out = run_bili_script(python_bin, code)
-    return json.loads(out)
+
+_GEMINI_KEY = os.environ.get("GEMINI_API_KEY")
+if not _GEMINI_KEY:
+    print("ERROR: export GEMINI_API_KEY='your_key'")
+    sys.exit(1)
 
 
-def download_audio(python_bin: str, bvid: str, cid: int, output: Path) -> bool:
-    """下载最佳音频流，尝试 baseUrl → backupUrl 降级"""
-    code = f"""
-from bilibili_api import sync, select_client, Credential
-from bilibili_api.video import Video
-import json, time
-
-time.sleep(3)
-select_client('curl_cffi')
-cred = Credential()
-v = Video(bvid='{bvid}', credential=cred)
-url_data = sync(v.get_download_url(cid={cid}))
-audio_list = url_data.get('dash', {{}}).get('audio', [])
-if not audio_list:
-    print(json.dumps({{'error': 'no audio stream'}}))
-    exit(1)
-best = max(audio_list, key=lambda a: a.get('bandwidth', 0))
-print(json.dumps({{
-    'baseUrl': best.get('baseUrl', ''),
-    'backupUrl': best.get('backupUrl', []),
-}}, ensure_ascii=False))
-"""
-    out = run_bili_script(python_bin, code)
-    data = json.loads(out)
-
-    if "error" in data:
-        print(f"错误：{data['error']}", file=sys.stderr)
-        return False
-
-    # 收集候选 URL：backupUrl 优先，再 baseUrl
-    candidates = list(data.get("backupUrl", [])) + [data["baseUrl"]]
-
-    for i, url in enumerate(candidates):
-        if not url:
-            continue
-        print(f"  尝试下载 (URL #{i + 1})...", file=sys.stderr)
-        dl_code = f"""
-from curl_cffi import requests
-url = {json.dumps(url)}
-headers = {{
-    'Referer': 'https://www.bilibili.com/video/{bvid}',
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
-}}
-r = requests.Session().get(url, impersonate='chrome', headers=headers, timeout=30)
-print(len(r.content))
-if len(r.content) > 1000:
-    with open('{output}', 'wb') as f:
-        f.write(r.content)
-else:
-    print(0)
-"""
-        result = subprocess.run(
-            [python_bin, "-c", dl_code],
-            capture_output=True, text=True, timeout=60,
-        )
-        if result.returncode == 0:
-            size = result.stdout.strip()
-            if size.isdigit() and int(size) > 1000:
-                return True
-        time.sleep(2)
-
-    print("错误：所有下载链接均失败", file=sys.stderr)
-    return False
+def log(*args, **kw):
+    print("[bili]", *args, **kw, flush=True)
 
 
-def summarize_with_gemini(audio_path: Path) -> str:
-    """调用 Gemini API 分析音频"""
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        print("错误：请设置 GEMINI_API_KEY 环境变量", file=sys.stderr)
-        sys.exit(1)
+# ── Step 1: 获取视频信息 ──────────────────────────────────
 
-    audio_data = audio_path.read_bytes()
-
-    payload = {
-        "contents": [{
-            "parts": [
-                {"text": ANALYSIS_PROMPT},
-                {"inline_data": {
-                    "mime_type": "audio/mp4",
-                    "data": base64.b64encode(audio_data).decode(),
-                }},
-            ],
-        }],
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 8192},
+def get_video_info(bvid: str) -> dict:
+    select_client("curl_cffi")
+    v = Video(bvid=bvid, credential=Credential())
+    info = sync(v.get_info())
+    pages = info.get("pages", [])
+    return {
+        "title": info.get("title", ""),
+        "owner": info.get("owner", {}).get("name", ""),
+        "bvid": bvid,
+        "duration": info.get("duration", 0),
+        "pages": [
+            {"cid": p["cid"], "part": p.get("part", ""), "duration": p.get("duration", 0)}
+            for p in pages
+        ],
+        "has_subtitle": bool(info.get("subtitle", {}).get("list", [])),
     }
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={api_key}"
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
+
+# ── Step 2: 下载 DASH 音频 ────────────────────────────────
+
+def download_audio(bvid: str, cid: int, output: str) -> float:
+    select_client("curl_cffi")
+    v = Video(bvid=bvid, credential=Credential())
+    url_data = sync(v.get_download_url(cid=cid))
+    audio_list = url_data.get("dash", {}).get("audio", [])
+    best = max(audio_list, key=lambda a: a.get("bandwidth", 0))
+
+    log(f"  音频: codec={best.get('codecs')}, bandwidth={best.get('bandwidth')}")
+    s = requests.Session()
+    r = s.get(best["baseUrl"], headers={"Referer": "https://www.bilibili.com"}, timeout=300)
+    Path(output).write_bytes(r.content)
+    s.close()
+
+    # 检查实际时长
+    dur = subprocess.run(
+        ["ffprobe", "-hide_banner", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", output],
+        capture_output=True, text=True,
     )
-    print("  Gemini 分析中（约 30-60 秒）...", file=sys.stderr)
-    with urllib.request.urlopen(req, timeout=600) as r:
-        resp = json.load(r)
-
-    parts = []
-    for cand in resp.get("candidates", []):
-        for part in cand.get("content", {}).get("parts", []):
-            parts.append(part.get("text", ""))
-    return "\n".join(parts)
+    actual = float(dur.stdout.strip() or 0)
+    log(f"  已下载: {Path(output).name} ({os.path.getsize(output)/1024/1024:.0f}MB, {actual/60:.0f}min)")
+    return actual
 
 
-def format_summary(info: dict, bvid: str, summary_text: str) -> str:
-    """按统一格式输出总结"""
-    duration_min = info["duration"] // 60
-    duration_sec = info["duration"] % 60
-    subtitle_note = "有字幕" if info["has_subtitle"] else "无字幕"
-    return f"""# {info['title']}
+# ── Step 3: Remux .m4s → .m4a ────────────────────────────
 
-- **UP 主：** {info['owner']}
-- **时长：** {duration_min}:{duration_sec:02d}
+def remux_to_m4a(src: str, dst: str):
+    """Gemini File API 需要规范 MIME type, .m4s 会被识别为 octet-stream"""
+    subprocess.run(
+        ["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", src, "-c", "copy", dst],
+        check=True,
+    )
+
+
+# ── Step 4: 上传音频到 Gemini File API ────────────────────
+
+def upload_to_gemini(filepath: str, display_name: str) -> str:
+    """返回 file_uri"""
+    url = "https://generativelanguage.googleapis.com/upload/v1beta/files"
+    size = os.path.getsize(filepath)
+    content = Path(filepath).read_bytes()
+
+    # 4a. 发起上传
+    headers = {
+        "X-Goog-Upload-Protocol": "resumable",
+        "X-Goog-Upload-Command": "start",
+        "X-Goog-Upload-Header-Content-Length": str(size),
+        "Content-Type": "application/json",
+    }
+    meta = {"file": {"display_name": display_name, "mime_type": "audio/mp4"}}
+    r = requests.post(f"{url}?key={_GEMINI_KEY}", json=meta, headers=headers, timeout=120)
+    upload_url = r.headers["X-Goog-Upload-URL"]
+
+    # 4b. 上传内容
+    headers2 = {
+        "X-Goog-Upload-Protocol": "resumable",
+        "X-Goog-Upload-Command": "upload, finalize",
+        "X-Goog-Upload-Offset": "0",
+        "Content-Type": "audio/mp4",
+        "Content-Length": str(size),
+    }
+    r2 = requests.post(upload_url, data=content, headers=headers2, timeout=600)
+    r2.raise_for_status()
+    result = r2.json()
+    file_uri = result["file"]["uri"]
+    log(f"  上传完成: {display_name} → {file_uri}")
+    return file_uri
+
+
+# ── Step 5: Gemini 生成总结 ───────────────────────────────
+
+PROMPT = """你是一位专业的视频内容分析师。请仔细听这段直播/视频音频，输出中文总结。
+
+请按照以下结构输出：
+## 总结
+概括视频核心内容。
+
+## 核心内容
+列出主要话题和关键信息。
+
+## 可执行建议【如适用】
+如果包含可落地的建议、方法、工具或策略。
+
+## 需要警惕【如适用】
+如果涉及投资、商业、健康、心理等需要批判性看待的内容。
+
+注意：忽略广告赞助商内容；不要编造信息；结构化分点输出。"""
+
+
+def summarize_audio(file_uri: str, context: str = "") -> str:
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={_GEMINI_KEY}"
+    prompt_text = PROMPT
+    if context:
+        prompt_text = f"{context}\n\n{PROMPT}"
+
+    payload = {
+        "contents": [{"parts": [{"text": prompt_text}, {"file_data": {"mime_type": "audio/mp4", "file_uri": file_uri}}]}],
+        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 16384},
+    }
+    r = requests.post(url, json=payload, timeout=600)
+    r.raise_for_status()
+    text = "\n".join(
+        part.get("text", "")
+        for cand in r.json().get("candidates", [])
+        for part in cand.get("content", {}).get("parts", [])
+    )
+    return text
+
+
+# ── Step 6: 输出 markdown ─────────────────────────────────
+
+def format_duration(seconds: int) -> str:
+    h, m = divmod(seconds, 3600)
+    m, s = divmod(m, 60)
+    if h:
+        return f"{h}:{m:02d}:{s:02d}"
+    return f"{m}:{s:02d}"
+
+
+def generate_output(info: dict, summary_text: str) -> str:
+    title = info["title"]
+    owner = info["owner"]
+    dur = format_duration(info["duration"])
+    bvid = info["bvid"]
+    source = "无字幕，实际音频 + Gemini 2.5 Flash"
+
+    return f"""# {title}
+
+- **UP 主：** {owner}
+- **时长：** {dur}
 - **链接：** [{bvid}](https://www.bilibili.com/video/{bvid})
-- **处理方式：** {subtitle_note}，实际音频 + Gemini 2.5 Flash
+- **处理方式：** {source}
 
 {summary_text}
 """
 
 
+# ── Main ──────────────────────────────────────────────────
+
 def main():
     if len(sys.argv) < 2:
-        print(f"用法: {sys.argv[0]} <BVID 或 URL>", file=sys.stderr)
+        print("用法: python3 process.py BVxxxxxxxx")
         sys.exit(1)
 
-    bvid = extract_bvid(sys.argv[1])
+    bvid = sys.argv[1].strip()
+    tmp = Path("/tmp")
+    log(f"开始处理: {bvid}")
 
-    # 1. 确保环境
-    python_bin = ensure_venv()
+    # 1. 获取信息
+    info = get_video_info(bvid)
+    log(f"标题: {info['title']}")
+    log(f"UP主: {info['owner']}, 时长: {info['duration']}s, 分P: {len(info['pages'])}")
+    log(f"字幕: {'有' if info['has_subtitle'] else '无'} → {'字幕路线' if info['has_subtitle'] else '音频路线'}")
 
-    # 2. 获取视频信息
-    print(f"📺 获取视频信息...", file=sys.stderr)
-    info = get_video_info(python_bin, bvid)
-    print(f"  标题: {info['title']}", file=sys.stderr)
-    print(f"  UP主: {info['owner']}", file=sys.stderr)
-    print(f"  时长: {info['duration']}s", file=sys.stderr)
-
-    if info["has_subtitle"]:
-        print("  有字幕（未实现字幕路线，留待扩展）", file=sys.stderr)
-
-    # 3. 下载音频
-    print(f"📥 下载音频...", file=sys.stderr)
-    audio_path = Path(f"/tmp/{bvid}_audio.m4s")
-    ok = download_audio(python_bin, bvid, info["cid"], audio_path)
-    if not ok:
+    if not info["pages"]:
+        log("ERROR: 无可用分P")
         sys.exit(1)
 
-    # ffprobe 检验
-    result = subprocess.run(
-        ["ffprobe", "-hide_banner", "-show_entries", "format=duration",
-         "-of", "default=noprint_wrappers=1:nokey=1", str(audio_path)],
-        capture_output=True, text=True, timeout=15,
-    )
-    audio_dur = result.stdout.strip()
-    print(f"  音频时长: {float(audio_dur):.1f}s" if audio_dur else "  音频时长: 未知",
-          file=sys.stderr)
+    # 2. 下载并总结每个分P
+    page_summaries = []
+    for i, page in enumerate(info["pages"]):
+        cid = page["cid"]
+        label = page.get("part") or f"P{i+1}"
+        log(f"\n── 分P {i+1}: {label} ──")
 
-    # 4. Gemini 分析
-    print(f"🤖 Gemini 分析...", file=sys.stderr)
-    summary_text = summarize_with_gemini(audio_path)
-    print(f"  ✅ 分析完成", file=sys.stderr)
+        m4s_path = tmp / f"{bvid}_p{i}_audio.m4s"
+        m4a_path = tmp / f"{bvid}_p{i}.m4a"
 
-    # 5. 保存并输出
-    safe_title = re.sub(r'[\\/:*?"<>|]', '_', info["title"])
-    filename = f"{info['owner']}_{safe_title}.md"
-    output_path = SUMMARY_DIR / filename
+        # 下载音频
+        actual_sec = download_audio(bvid, cid, str(m4s_path))
 
-    formatted = format_summary(info, bvid, summary_text)
-    output_path.write_text(formatted)
-    print(f"\n💾 已保存: {output_path}", file=sys.stderr)
+        # remux → m4a (Gemini 要求规范 MIME)
+        log("  remux → m4a ...")
+        remux_to_m4a(str(m4s_path), str(m4a_path))
+        m4s_path.unlink(missing_ok=True)  # 删除 raw m4s
 
-    # 6. 输出到 stdout
-    print(formatted)
+        # 上传到 Gemini
+        uri = upload_to_gemini(str(m4a_path), f"{bvid}_p{i}")
+
+        # 生成总结
+        context = f"这是视频的第 {i+1} 部分（共 {len(info['pages'])} 部分），分P标题：{label}"
+        summary = summarize_audio(uri, context)
+        page_summaries.append(summary)
+        log(f"  总结: {len(summary)} 字符")
+
+        # 删除临时 m4a
+        m4a_path.unlink(missing_ok=True)
+
+        if i < len(info["pages"]) - 1:
+            time.sleep(2)  # 避免频率限制
+
+    # 3. 合并输出
+    combined = "\n\n---\n\n".join(page_summaries)
+    output = generate_output(info, combined)
+
+    out_dir = Path("video-summaries")
+    out_dir.mkdir(exist_ok=True)
+    safe_title = info["title"].replace("/", "_").replace(":", "：")
+    out_path = out_dir / f"{safe_title}.md"
+    out_path.write_text(output)
+
+    log(f"\n✓ 总结已保存: {out_path}")
 
 
 if __name__ == "__main__":

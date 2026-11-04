@@ -9,7 +9,7 @@
 ```bash
 # bilibili-api-python + curl_cffi 用于绕过B站风控
 uv venv -p 3.12 /tmp/bili_venv
-uv pip install --python /tmp/bili_venv/bin/python bilibili-api-python httpx curl_cffi
+uv pip install --python /tmp/bili_venv/bin/python bilibili-api-python httpx curl_cffi requests
 ```
 
 需要 `ffprobe`、`ffmpeg`（macOS: `brew install ffmpeg`）。
@@ -114,45 +114,72 @@ ffprobe -hide_banner -show_entries format=duration -of default=noprint_wrappers=
 
 > ⚠️ 请求间加 3-5 秒延迟，避免触发频率限制。
 
-## 4. 用音频做内容理解
+### 3.1 关键：remux .m4s → .m4a
 
-把音频提交给 Gemini：
+B 站 DASH 音频下载后是 `.m4s` 格式。直接上传 Gemini File API 会被识别为 `application/octet-stream` 导致无法处理音频。必须 remux：
+
+```bash
+ffmpeg -hide_banner -loglevel error -i /tmp/BVxxxx_audio.m4s -c copy /tmp/BVxxxx_audio.m4a
+```
+
+`-c copy` 只重新封装、不转码，速度极快。
+
+## 4. 上传音频到 Gemini 并总结
+
+**注意：** 不要用 `curl_cffi` 调用 Google API（impersonate 会导致连接断连）。Gemini 相关请求必须用标准 `requests` 库。
+
+### 4.1 上传到 File API
+
+长音频（>20MB）必须用 File API 上传，不能用 inline_data：
 
 ```python
-import base64, json, os, urllib.request
-from pathlib import Path
+import os, requests
 
-GEMINI_KEY = os.environ['GEMINI_API_KEY']
-audio = Path(f'/tmp/{bvid}_audio.m4s').read_bytes()
+def upload_to_gemini(filepath: str, display_name: str) -> str:
+    url = "https://generativelanguage.googleapis.com/upload/v1beta/files"
+    size = os.path.getsize(filepath)
+    content = Path(filepath).read_bytes()
 
-prompt = '''请仔细听这段视频音频，输出中文总结：
-1. 视频一句话总结。
-2. 按时间轴总结主要内容，时间戳到分钟:秒。
-3. 提炼核心观点、方法论和可执行建议。
-4. 标出容易误解或需要警惕的地方。
-不要逐字转录，不要编造音频中没有的信息。'''
+    # 发起上传
+    headers = {
+        "X-Goog-Upload-Protocol": "resumable",
+        "X-Goog-Upload-Command": "start",
+        "X-Goog-Upload-Header-Content-Length": str(size),
+        "Content-Type": "application/json",
+    }
+    meta = {"file": {"display_name": display_name, "mime_type": "audio/mp4"}}
+    r = requests.post(f"{url}?key={GEMINI_KEY}", json=meta, headers=headers, timeout=120)
+    upload_url = r.headers["X-Goog-Upload-URL"]
+
+    # 上传内容（必须设 X-Goog-Upload-Offset: 0）
+    headers2 = {
+        "X-Goog-Upload-Protocol": "resumable",
+        "X-Goog-Upload-Command": "upload, finalize",
+        "X-Goog-Upload-Offset": "0",
+        "Content-Type": "audio/mp4",
+        "Content-Length": str(size),
+    }
+    r2 = requests.post(upload_url, data=content, headers=headers2, timeout=600)
+    r2.raise_for_status()
+    return r2.json()["file"]["uri"]
+```
+
+### 4.2 用 file_data 引用生成总结
+
+```python
+url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}"
 
 payload = {
-    'contents': [{
-        'parts': [
-            {'text': prompt},
-            {'inline_data': {'mime_type': 'audio/mp4', 'data': base64.b64encode(audio).decode()}},
-        ],
+    "contents": [{
+        "parts": [
+            {"text": "请听这段音频，输出中文总结"},
+            {"file_data": {"mime_type": "audio/mp4", "file_uri": URI}},
+        ]
     }],
-    'generationConfig': {'temperature': 0.2, 'maxOutputTokens': 4096},
+    "generationConfig": {"temperature": 0.2, "maxOutputTokens": 16384},
 }
 
-url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}'
-req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'})
-with urllib.request.urlopen(req, timeout=300) as r:
-    resp = json.load(r)
-
-text = '\n'.join(
-    part.get('text', '')
-    for cand in resp.get('candidates', [])
-    for part in cand.get('content', {}).get('parts', [])
-)
-Path(f'/tmp/{bvid}_summary.md').write_text(text)
+r = requests.post(url, json=payload, timeout=600)
 ```
 
 ## 5. 书单类视频的额外校验
@@ -203,16 +230,12 @@ ffmpeg -hide_banner -loglevel error -i /tmp/BVxxxx_video.m4s \
 - **链接：** [{BVID}](https://www.bilibili.com/video/{BVID})
 - **处理方式：** {有/无字幕}，实际音频 + Gemini 2.5 Flash
 
-## 一句话总结
-{一句话概括视频核心内容}
+## 总结
+{概括视频核心内容}
 
-## 时间轴摘要
-- `MM:SS-MM:SS` {内容要点}
-- `MM:SS-MM:SS` {内容要点}
-
-## 核心观点
-1. {观点一}
-2. {观点二}
+## 核心内容
+1. {一}
+2. {二}
 
 ## 可执行建议【如适用】
 {只有当视频包含可落地的方法论或行动指南时才输出}
@@ -253,6 +276,21 @@ ffmpeg -hide_banner -loglevel error -i /tmp/BVxxxx_video.m4s \
 - 遇到"赚钱、人生、心理、健康"等主题，要单独写"需要警惕"，避免把营销话术或玄学表达当成事实。
 - 最终回答里说清楚：无字幕/有字幕、是否下载音频、是否用了外部来源。
 
+### 快速执行（脚本方式）
+
+也可直接使用 `script/process.py` 一键处理：
+
+```bash
+# 安装依赖
+uv venv -p 3.12 /tmp/bili_venv
+uv pip install --python /tmp/bili_venv/bin/python bilibili-api-python httpx curl_cffi requests
+
+export GEMINI_API_KEY='your_key'
+python3 script/process.py BVxxxxxxxx
+```
+
+脚本会自动完成：获取视频信息 → 下载各分P音频 → remux → 上传 Gemini → 总结 → 输出到 `video-summaries/`。
+
 ## 8. 防坑指南（实战经验）
 
 ### 8.1 B 站风控
@@ -268,7 +306,17 @@ B 站 API 有严格的反爬机制：
 
 **必须使用 `curl_cffi` 的 Chrome impersonation**（`impersonate='chrome'`）来绕过 TLS 指纹检测。普通 `requests`/`curl` 会直接触发 412。
 
-### 8.2 WBI 签名
+### 8.2 Gemini 音频处理
+
+| 坑 | 原因 | 解决 |
+|----|------|------|
+| `.m4s` 文件 MIME 错误 | Gemini File API 识别为 `application/octet-stream` | `ffmpeg -i input.m4s -c copy output.m4a` remux 后再上传 |
+| curl_cffi 请求 Gemini 断连 | `impersonate='chrome'` 与 Google API 不兼容 | 用标准 `requests` 库调用 Gemini 相关 API |
+| File API 上传 400 | 缺少 `X-Goog-Upload-Offset` 头 | `X-Goog-Upload-Offset: 0` 必须设置 |
+| 长音频(>2h) Gemini 超时 | 默认 timeout 不够 | timeout=600 |
+| 多分 P 视频 | 各分P 需独立下载+总结 | 最后合并输出 |
+
+### 8.3 WBI 签名
 
 获取 UP 主视频列表等操作需要 WBI 签名的 API（`/x/space/wbi/arc/search`）：
 
@@ -280,7 +328,7 @@ B 站 API 有严格的反爬机制：
 
 密钥是动态的，**不要硬编码 JS bundle 里的 fallback key**，它们会过期。
 
-### 8.3 推荐技术栈
+### 8.4 推荐技术栈
 
 最佳实践组合：
 
@@ -293,33 +341,10 @@ bilibili-api-python + curl_cffi (select_client('curl_cffi'))
 - 请求间加至少 3-5 秒延迟
 - 批量处理时用 `asyncio` + `await asyncio.sleep(N)`
 
-## 9. 自动化脚本
 
-项目提供了 `script/process.py` 一键处理脚本，自动完成上述所有步骤。
+## 9. 附录
 
-### 用法
-
-```bash
-export GEMINI_API_KEY='your_key'
-
-# 传 BVID 或完整 URL
-python3 script/process.py BVxxxxxxxx
-python3 script/process.py https://www.bilibili.com/video/BVxxxxxxxx
-```
-
-### 功能
-
-- 首次运行自动创建 Python 3.12 虚拟环境并安装依赖
-- 获取视频信息（标题、UP 主、时长、CID）
-- 检测字幕可用性（目前默认走音频路线）
-- 下载 DASH 音频流，`baseUrl` 失效自动降级到 `backupUrl`
-- `ffprobe` 校验音频完整性
-- 调用 Gemini 2.5 Flash 分析音频
-- 按统一格式输出到 `video-summaries/` 目录
-
-## 10. 附录
-
-### 10.1 音频下载注意事项
+### 9.1 音频下载注意事项
 
 - 音频 DASH 流的 `baseUrl` 有时效性，获取后尽快下载
 - 如果 `baseUrl` 过期，可使用 `backupUrl` 备选地址
